@@ -567,8 +567,7 @@ jobs:
 workflows:
   default:
     jobs:
-      - build-frontend:
-          context: slack-secrets
+      - build-frontend
       - build-backend
       - test-frontend:
           requires: [build-frontend]
